@@ -1,0 +1,6 @@
+if SHIELD_V1
+
+config ZMK_KEYBOARD_NAME
+    default "Keypad_calc"
+
+endif # SHIELD_V1
