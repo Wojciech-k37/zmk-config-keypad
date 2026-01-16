@@ -25,7 +25,7 @@
         // Replace these comments with the GPIO pins in the matrix.
         // See https://zmk.dev/docs/development/hardware-integration/new-shield#shield-overlays
         gpios
-            = <&pro_micro 21 GPIO_ACTIVE_HIGH>
+            = <&pro_micro 19 GPIO_ACTIVE_HIGH>
             , <&pro_micro 20 GPIO_ACTIVE_HIGH>
             , <&pro_micro 3 GPIO_ACTIVE_HIGH>
             , <&pro_micro 4 GPIO_ACTIVE_HIGH>
@@ -55,9 +55,6 @@
 };
 
 // Disabling I2C frees up Pin 2 (SDA) and Pin 3 (SCL)
-&vbatt {
-    status = "disabled";
-};
 &i2c0 {
     status = "disabled";
 };
