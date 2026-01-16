@@ -55,6 +55,9 @@
 };
 
 // Disabling I2C frees up Pin 2 (SDA) and Pin 3 (SCL)
+&vbatt {
+    status = "disabled";
+};
 &i2c0 {
     status = "disabled";
 };
