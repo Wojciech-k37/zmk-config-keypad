@@ -34,7 +34,7 @@
             , <&pro_micro 7 GPIO_ACTIVE_HIGH>
             ;
 
-        interrupt-gpios = <&pro_micro 002 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+        //interrupt-gpios = <&pro_micro 002 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
     };
 
     default_transform: default_transform {
