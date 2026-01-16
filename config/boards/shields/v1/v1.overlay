@@ -31,7 +31,7 @@
             , <&pro_micro 22 GPIO_ACTIVE_HIGH>
             , <&pro_micro 24 GPIO_ACTIVE_HIGH>
             , <&pro_micro 100 GPIO_ACTIVE_HIGH>
-            , <&pro_micro 11 GPIO_ACTIVE_HIGH)>
+            , <&pro_micro 11 GPIO_ACTIVE_HIGH>
             ;
 
         interrupt-gpios = <&pro_micro 002 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
