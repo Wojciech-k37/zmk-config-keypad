@@ -53,3 +53,13 @@
         >;
     };
 };
+
+// Disabling I2C frees up Pin 2 (SDA) and Pin 3 (SCL)
+&i2c0 {
+    status = "disabled";
+};
+
+// Disabling SPI frees up Pins 14, 15, 16
+&spi0 {
+    status = "disabled";
+    /delete-property/ cs-gpios;
