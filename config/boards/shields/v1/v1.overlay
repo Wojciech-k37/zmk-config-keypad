@@ -63,3 +63,4 @@
 &spi0 {
     status = "disabled";
     /delete-property/ cs-gpios;
+};
