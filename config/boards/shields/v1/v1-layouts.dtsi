@@ -3,21 +3,31 @@
 
 #include <physical_layouts.dtsi>
 
-/ {
-    default_layout: default_layout {
-        compatible = "zmk,physical-layout";
-        display-name = "Default Layout";
-        transform = <&default_transform>;
-        kscan = <&kscan>;
+/{
+    layouts {
+        compatible = "zmk,layouts";
+        label = "Layouts";
 
-        // Edit this to define the positions and sizes of the keys, or remove it
-        // if your keyboard will not support ZMK Studio.
-        // https://zmk.dev/docs/development/hardware-integration/physical-layouts#optional-keys-property
-        keys  //                     w   h    x    y     rot    rx    ry
-            = <&key_physical_attrs 100 100    0    0       0     0     0>
-            , <&key_physical_attrs 100 100  100    0       0     0     0>
-            , <&key_physical_attrs 100 100    0  100       0     0     0>
-            , <&key_physical_attrs 100 100  100  100       0     0     0>
+        default_layout: default_layout {
+            compatible = "zmk,physical-layout";
+            display-name = "Default Layout";
+            transform = <&default_transform>;
+            kscan = <&kscan0>;
+
+            // 4 Columns x 5 Rows Grid (Standard Numpad Shape)
+            // Format: < x y width height >
+            keys
+            // Row 1
+            = < 0 0 100 100 >, < 100 0 100 100 >, < 200 0 100 100 >, < 300 0 100 100 >
+            // Row 2
+            , < 0 100 100 100 >, < 100 100 100 100 >, < 200 100 100 100 >, < 300 100 100 100 >
+            // Row 3
+            , < 0 200 100 100 >, < 100 200 100 100 >, < 200 200 100 100 >, < 300 200 100 100 >
+            // Row 4
+            , < 0 300 100 100 >, < 100 300 100 100 >, < 200 300 100 100 >, < 300 300 100 100 >
+            // Row 5
+            , < 0 400 100 100 >, < 100 400 100 100 >, < 200 400 100 100 >, < 300 400 100 100 >
             ;
+        };
     };
 };

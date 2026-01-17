@@ -4,7 +4,7 @@
 
 #include <dt-bindings/zmk/matrix_transform.h>
 
-
+#include "v1-layouts.dtsi"
 
 / {
     chosen {
@@ -36,7 +36,7 @@
         // See https://zmk.dev/docs/development/hardware-integration/new-shield#matrix-transform
         // for how to configure this
         compatible = "zmk,matrix-transform";
-        columns = <4>;
+        columns = <2>;
         rows = <5>;
 
         map = <
