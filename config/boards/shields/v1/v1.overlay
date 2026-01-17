@@ -35,7 +35,7 @@
         // See https://zmk.dev/docs/development/hardware-integration/new-shield#matrix-transform
         // for how to configure this
         compatible = "zmk,matrix-transform";
-        columns = <2>;
+        columns = <4>;
         rows = <5>;
 
         map = <
@@ -48,12 +48,13 @@
     };
 };
 
-// Disabling I2C frees up Pin 2 (SDA) and Pin 3 (SCL)
-&i2c0 {
-    status = "disabled";
-};
+// Disable I2C (Unlocks Pin 3)
+&i2c0 { status = "disabled"; };
 
-// Disabling SPI frees up Pins 14, 15, 16
-&spi0 {
-    status = "disabled";
-};
+// Disable SPI (Unlocks Pins 4, 5, 6)
+&spi0 { status = "disabled"; };
+&spi1 { status = "disabled"; };
+&spi2 { status = "disabled"; };
+
+// Disable Battery Sensor (Unlocks Pin 21 if you ever use it)
+&vbatt { status = "disabled"; };
