@@ -56,12 +56,4 @@
     };
 };
 
-// Disable I2C (Unlocks Pin 3)
-&i2c0 { status = "disabled"; };
-
-// Disable SPI (Unlocks Pins 4, 5, 6)
-&spi0 { status = "disabled"; };
-&spi1 { status = "disabled"; };
-&spi2 { status = "disabled"; };
-
 
