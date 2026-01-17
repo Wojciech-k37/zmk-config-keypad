@@ -35,7 +35,7 @@
         // See https://zmk.dev/docs/development/hardware-integration/new-shield#matrix-transform
         // for how to configure this
         compatible = "zmk,matrix-transform";
-        columns = <4>;
+        columns = <2>;
         rows = <5>;
 
         map = <
